@@ -120,9 +120,9 @@ MEDIA_URL = "/media/"
 
 
 # E-mails
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-# DEFAULT_FROM_EMAIL =
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "Simple MOOC <simplemooc@simplemooc.com>"
 # EMAIL_USE_TLS = ""
 # EMAIL_HOST =
 # EMAIL_HOST_USER =

@@ -56,3 +56,4 @@ class PasswordResetForm(forms.Form):
         subject = "Criar nova senha no Simple MOOC"
         context = {"reset": reset}
         send_mail_template(subject, template_name, context, [user.email])
+
