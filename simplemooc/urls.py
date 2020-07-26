@@ -23,6 +23,7 @@ urlpatterns = [
     path("", include(("core.urls", "core"), namespace="core")),
     path("conta/", include(("accounts.urls", "accounts"), namespace="accounts")),
     path("cursos/", include(("courses.urls", "courses"), namespace="courses")),
+    path("forum/", include(("forum.urls", "forum"), namespace="forum")),
 ]
 
 # if settings.DEBUG:
