@@ -7,12 +7,12 @@
     <meta name="description" content="Simple MOOC - Uma simples plataforma de ensino a distância" />
     <title>Simple MOOC</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 </head>
 <body>
 <div class="header">
-    <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="{% url 'core:home' %}">SIMPLE MOOC</a>
         <ul>
             <li class="pure-menu-selected"><a href="{% url 'core:home' %}">Início</a></li>
@@ -20,10 +20,10 @@
             <li><a href="{% url 'forum:index' %}">Fórum</a></li>
             <li><a href="{% url 'core:contact' %}">Contato</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url 'accounts:dashboard' %}">Painel</a></li>
-                <li><a href="{% url 'accounts:logout' %}">Sair</a></li>
+            <li><a href="{% url 'accounts:dashboard' %}">Painel</a></li>
+            <li><a href="{% url 'accounts:logout' %}">Sair</a></li>
             {% else %}
-                <li><a href="{% url 'accounts:login' %}">Entrar</a></li>
+            <li><a href="{% url 'accounts:login' %}">Entrar</a></li>
             {% endif %}
         </ul>
     </div>
@@ -44,5 +44,7 @@
     </div>
 </div>
 <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+{% block scripts %}{% endblock %}
 </body>
 </html>
